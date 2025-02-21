@@ -1,2 +1,1 @@
-# Análisis-de-NLP-con-varios-datasets
-Análisis de NLP con diferentes herramientas y datasets
+Este proyecto contiene varios ejercicios de NLP
