@@ -1,0 +1,69 @@
+# Mini App de Traducción con Flask
+
+Este es un servicio de traducción basado en Flask que utiliza el modelo Helsinki-NLP/opus-mt-en-es para traducir textos del inglés al español.
+
+## Requisitos
+
+Asegúrate de tener instalado Python 3.8 o superior y pip.
+
+## Instalación
+
+1. Clona este repositorio o copia el código en un directorio local.
+2. Instala las dependencias necesarias ejecutando:
+
+   ```sh
+   pip install flask flask-cors torch transformers
+   ```
+
+## Ejecución del Servicio
+
+Para ejecutar el servicio, simplemente corre el script de Python:
+
+```sh
+python nombre_del_script.py
+```
+
+El servicio se ejecutará en `http://localhost:5555/`.
+
+## Uso del Servicio
+
+### Acceso a la Interfaz Web
+
+Abre tu navegador y visita:
+
+```
+http://localhost:5555/
+```
+
+Desde esta interfaz, puedes ingresar un texto en inglés y presionar el botón para traducirlo al español.
+
+### Uso de la API REST
+
+#### Endpoint: `/translate`
+
+- **Método:** `POST`
+- **Formato de entrada:** JSON
+
+  ```json
+  {
+    "text": "Hello, how are you?"
+  }
+  ```
+
+- **Formato de respuesta:** JSON
+
+  ```json
+  {
+    "translation": "Hola, ¿cómo estás?"
+  }
+  ```
+
+## Notas
+
+- El servicio se ejecuta en un hilo para mantenerse activo sin bloquear la ejecución.
+- Se habilitó CORS para permitir peticiones desde otros orígenes.
+
+## Autor
+
+Desarrollado por Valery Villarruel.
+
